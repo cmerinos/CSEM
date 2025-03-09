@@ -74,4 +74,7 @@ check.plot(MF.CSEM.output = output.MF,
            score.type = "observed",
            plot.type = "CSEM")
 
-showMethods(mirt::plot)
+
+example("check.location")
+devtools::document()
+?`CSEM-package`

@@ -37,8 +37,5 @@ Cronbach, L. J. (1951). Coefficient alpha and the internal structure of tests.
  Psychometrika, 16, 297-334.
 }
 \seealso{
-\code{\link[lavaan]{cfa}}, \code{\link[scripty]{mimic}}, \code{\link[scripty]{prods}}
-}
-\author{
-Cesar Merino-Soto \email{sikayax@yahoo.com.ar}
+\code{\link[lavaan]{cfa}}, \code{\link[scripty]{mimic}}
 }

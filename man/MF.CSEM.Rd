@@ -22,7 +22,7 @@ MF.CSEM(
 
 \item{data}{A data frame containing the item responses for all examinees.}
 
-\item{reliability.coef}{A numeric value indicating the reliability coefficient to be used in the calculation 
+\item{reliability.coef}{A numeric value indicating the reliability coefficient to be used in the calculation
 (e.g., Cronbach's α, Omega, Angoff, or Spearman-Brown).}
 
 \item{n.items}{Integer. The total number of items in the test.}
@@ -42,8 +42,8 @@ A list containing three data frames:
 }
 }
 \description{
-This function calculates the Conditional Standard Error of Measurement (CSEM) 
-using the Mollenkopf-Feldt (MF) procedure. The CSEM is computed for each possible score 
+This function calculates the Conditional Standard Error of Measurement (CSEM)
+using the Mollenkopf-Feldt (MF) procedure. The CSEM is computed for each possible score
 level, based on the selected halves of items.
 }
 \details{
@@ -57,7 +57,7 @@ The MF-CSEM is calculated using a multi-step procedure:
 \examples{
 # Example with a simulated dataset
 set.seed(123)
-data <- data.frame(matrix(sample(1:5, 100 * 10, replace = TRUE), ncol = 10))
+data <- data.frame(matrix(sample(3:5, 100 * 10, replace = TRUE), ncol = 10))
 MF.CSEM(half1 = 1:5, half2 = 6:10, data = data, reliability.coef = 0.85,
         n.items = 10, min.score.item = 1, max.score.item = 5)
 
