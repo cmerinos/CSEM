@@ -1,0 +1,26 @@
+{
+    "id": "E522248D",
+    "path": "~/GitHub/CSEM/R/check.distribution.R",
+    "project_path": "R/check.distribution.R",
+    "type": "r_source",
+    "hash": "2586053445",
+    "contents": "",
+    "dirty": false,
+    "created": 1741548229970.0,
+    "source_on_save": false,
+    "relative_order": 7,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "45,0",
+        "scrollLine": "22"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1740212930,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1740212930,
+    "read_only": false,
+    "read_only_alternatives": []
+}

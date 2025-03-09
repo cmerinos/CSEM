@@ -1,0 +1,77 @@
+devtools::document()
+devtools::load_all()
+
+unlink("man", recursive = TRUE) # Borra la documentación antigua
+devtools::document()  # Genera la nueva documentación
+devtools::load_all()  # Carga las funciones del paquete
+
+
+?calc.adjusted.diff
+help("calc.adjusted.diff")
+example(calc.adjusted.diff)
+rmarkdown::render("README.Rmd")
+
+
+
+
+half.names <- check.split(data = data.MF)
+
+half.names$half1
+
+half.names$half2
+
+calculate.OVI(x = rowSums(data.MF[, half.names$half1]),
+              y = rowSums(data.MF[, half.names$half2]), 
+              B = 100,
+              conf = .95)
+
+check.distribution(half1 = data.MF[, half.names$half1], 
+                   half2 = data.MF[, half.names$half2], 
+                   B = 100, 
+                   conf = .95)
+
+check.location(half1 = data.MF[, half.names$half1],
+               half2 = data.MF[, half.names$half2],
+               B = 100, 
+               conf = .95)
+
+check.scale(half1 = data.MF[, half.names$half1],
+            half2 = data.MF[, half.names$half2],
+            conf = .95)
+
+check.alpha(half1 = data.MF[, half.names$half1],
+            half2 = data.MF[, half.names$half2],
+            B = 100,
+            conf = .95)
+
+check.angoff(half1 = data.MF[, half.names$half1],
+             half2 = data.MF[, half.names$half2],
+             B = 100,
+             conf = .95)
+
+check.spearmanbrown(half1 = data.MF[, half.names$half1],
+                    half2 = data.MF[, half.names$half2],
+                    B = 100,
+                    conf = .95)
+
+check.omega(half1 = data.MF[, half.names$half1],
+            half2 = data.MF[, half.names$half2],
+            B = 100,
+            conf = .95)
+
+output.MF <- MF.CSEM(half1 = half.names$half1,
+                     half2 = half.names$half2, 
+                     data = data.MF, 
+                     reliability.coef = .83, 
+                     n.items = 10, 
+                     min.score.item = 1, 
+                     max.score.item = 5, 
+                     conf.level = .95)
+
+output.MF
+
+check.plot(MF.CSEM.output = output.MF, 
+           score.type = "observed",
+           plot.type = "CSEM")
+
+showMethods(mirt::plot)
