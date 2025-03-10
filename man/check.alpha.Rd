@@ -2,39 +2,58 @@
 % Please edit documentation in R/check.alpha.R
 \name{check.alpha}
 \alias{check.alpha}
-\title{Calculate Cronbach's Alpha for Two Halves}
+\title{Compute Cronbach's Alpha for Two Test Halves}
 \usage{
 check.alpha(half1, half2, B = 1000, conf = 0.95)
 }
 \arguments{
-\item{half1}{First half of the items}
+\item{half1}{A numeric matrix or data frame containing item scores for the first test half.}
 
-\item{half2}{Second half of the items}
+\item{half2}{A numeric matrix or data frame containing item scores for the second test half.}
 
-\item{B}{Number of bootstrap resamples (default = 1000)}
+\item{B}{Integer. The number of bootstrap resamples for confidence interval estimation (default = 1000).}
 
-\item{conf}{Confidence level for the confidence interval (default = 0.95)}
+\item{conf}{Numeric. The confidence level for the interval estimation (default = 0.95).}
 }
 \value{
-Data frame with Cronbach's alpha estimates and confidence intervals
+A data frame with the following columns:
+\itemize{
+  \item \code{Half}: Indicates which half was analyzed ("Half 1" or "Half 2").
+  \item \code{Coefficient}: The name of the reliability coefficient ("alpha").
+  \item \code{Estimate}: The estimated Cronbach's alpha.
+  \item \code{CI.lower}: The lower bound of the confidence interval.
+  \item \code{CI.upper}: The upper bound of the confidence interval.
+}
 }
 \description{
-Calculate Cronbach's Alpha for Two Halves
+This function calculates Cronbach's alpha (Cronbach, 1951) for each test half and estimates
+confidence intervals using bootstrap resampling.
 }
 \details{
-`check.alpha` calcula el coeficient alfa (Cronbach, 1951) para cada mitad, más
-intervalos de confianza usando bootstrap resamples.
+Cronbach's alpha is a measure of internal consistency reliability, computed as:
+
+\deqn{\alpha = \frac{k \bar{r}}{1 + (k - 1) \bar{r}}}
+
+where:
+- \eqn{k} is the number of items in the test half.
+- \eqn{\bar{r}} is the average inter-item correlation.
+
+The function estimates Cronbach's alpha separately for both halves and provides
+confidence intervals using bootstrap resampling.
 }
 \examples{
-### Example 1 ----------
-check.alpha(half1 = dbase[, 1:5], half2 = dbase[, 6:10], B = 1000, conf = .95)
+# Simulated test halves
+set.seed(123)
+half1 <- matrix(sample(1:5, 50, replace = TRUE), nrow = 10)
+half2 <- matrix(sample(1:5, 50, replace = TRUE), nrow = 10)
 
-
+# Compute Cronbach's alpha with bootstrapped confidence intervals
+check.alpha(half1, half2, B = 1000, conf = 0.95)
 
 }
 \references{
 Cronbach, L. J. (1951). Coefficient alpha and the internal structure of tests.
- Psychometrika, 16, 297-334.
+Psychometrika, 16(3), 297-334.
 }
 \seealso{
 \code{\link[lavaan]{cfa}}, \code{\link[scripty]{mimic}}

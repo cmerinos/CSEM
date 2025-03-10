@@ -2,22 +2,71 @@
 % Please edit documentation in R/check.angoff.R
 \name{check.angoff}
 \alias{check.angoff}
-\title{Calculate Angoff Coefficient}
+\title{Compute Angoff Coefficient for Reliability Estimation}
 \usage{
 check.angoff(half1, half2, B = 1000, conf = 0.95)
 }
 \arguments{
-\item{half1}{First half of the items}
+\item{half1}{A numeric matrix or data frame containing item scores for the first test half.}
 
-\item{half2}{Second half of the items}
+\item{half2}{A numeric matrix or data frame containing item scores for the second test half.}
 
-\item{B}{Number of bootstrap resamples (default = 1000)}
+\item{B}{Integer. Number of bootstrap resamples for confidence interval estimation (default = 1000).}
 
-\item{conf}{Confidence level for the confidence interval (default = 0.95)}
+\item{conf}{Numeric. Confidence level for the confidence interval (default = 0.95).}
 }
 \value{
-Data frame with the Angoff coefficient and confidence interval
+A data frame with the following columns:
+\itemize{
+  \item \code{Coefficient}: The name of the reliability coefficient ("Angoff Coefficient").
+  \item \code{Estimate}: The estimated Angoff reliability coefficient.
+  \item \code{CI.lower}: The lower bound of the confidence interval.
+  \item \code{CI.upper}: The upper bound of the confidence interval.
+}
 }
 \description{
-Calculate Angoff Coefficient
+This function calculates the **Angoff-Feldt coefficient**, a reliability estimate
+used for tests split into two halves of possibly **unequal lengths**. It provides
+a more flexible alternative to **Spearman-Brown**, particularly when the two halves
+of the test are not strictly parallel.
+}
+\details{
+The **Angoff coefficient** is computed using the formula:
+
+\deqn{\rho_{Angoff} = \frac{4 \text{cov}(X_1, X_2)}{\text{Var}(X_1) + \text{Var}(X_2) + 2 \text{cov}(X_1, X_2)}}
+
+where:
+- \eqn{X_1} and \eqn{X_2} are the total scores from each test half.
+- \eqn{\text{Var}(X_1)} and \eqn{\text{Var}(X_2)} are their variances.
+- \eqn{\text{cov}(X_1, X_2)} is the covariance between the two halves.
+
+Confidence intervals are estimated via **bootstrap resampling**.
+}
+\examples{
+# Simulated test halves
+set.seed(123)
+half1 <- matrix(sample(1:5, 30, replace = TRUE), nrow = 10)
+half2 <- matrix(sample(1:5, 30, replace = TRUE), nrow = 10)
+
+# Compute Angoff coefficient
+check.angoff(half1, half2, B = 1000, conf = 0.95)
+
+}
+\references{
+Domínguez-Lara, S., Merino-Soto, C. & Navarro-Loli, J. (2016). Estimación de la Confiabilidad en Mediciones de Dos ítems: el Coeficiente Angoff-Feldt.
+Revista Digital de Investigación en Docencia Universitaria, 10(1), 34-40. \doi{10.19083/ridu.10.463}
+
+Angoff, W. H. (1953). Test reliability and effective test length.
+Psychometrika, 18(1), 1-14. \doi{10.1007/BF02289023}
+
+Feldt, L. S. (2002). Reliability Estimation When a Test Is Split Into Two Parts of Unknown Effective Length.
+Measurement in Education, 15(3), 295-308. \doi{10.1207/S15324818AME1503_4}
+
+Feldt, L. S., & Brennan, R. L. (1989). Reliability. In Linn, R. L. (Ed), Educational Measurement (pp. 105 – 146). New York: Macmillan.
+
+Feldt, L. S., & Charter, R. A. (2003). Estimating the reliability of a test split into two parts of equal or unequal length.
+Psychological Methods, 8(1), 102-109. \doi{10.1037/1082-989X.8.1.102}
+}
+\seealso{
+\code{\link[lambda4]{angoff}}, \code{\link[psych]{alpha}}
 }
