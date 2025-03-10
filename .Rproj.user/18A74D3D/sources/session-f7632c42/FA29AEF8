@@ -1,26 +1,24 @@
 {
-    "id": "D5798E8B",
-    "path": "~/GitHub/CSEM/R/check.split.R",
-    "project_path": "R/check.split.R",
+    "id": "FA29AEF8",
+    "path": "~/GitHub/CSEM/R/Thorndike.CSEM.R",
+    "project_path": "R/Thorndike.CSEM.R",
     "type": "r_source",
-    "hash": "0",
+    "hash": "941329106",
     "contents": "",
     "dirty": false,
-    "created": 1741544342747.0,
+    "created": 1741582455889.0,
     "source_on_save": false,
     "relative_order": 6,
     "properties": {
         "source_window_id": "",
-        "Source": "Source",
-        "cursorPosition": "96,0",
-        "scrollLine": "0"
+        "Source": "Source"
     },
     "folds": "",
-    "lastKnownWriteTime": 1739831568,
+    "lastKnownWriteTime": 1739830945,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1739831568,
+    "last_content_update": 1739830945,
     "read_only": false,
     "read_only_alternatives": []
 }
