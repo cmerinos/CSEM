@@ -12,6 +12,8 @@ example(calc.adjusted.diff)
 rmarkdown::render("README.Rmd")
 
 
+## Create data
+data.MF <- data.frame(matrix(sample(3:5, 100 * 10, replace = TRUE), ncol = 10))
 
 
 half.names <- check.split(data = data.MF)
@@ -74,4 +76,10 @@ check.plot(MF.CSEM.output = output.MF,
            score.type = "observed",
            plot.type = "CSEM")
 
-showMethods(mirt::plot)
+
+example("check.location")
+devtools::document()
+
+?check.alpha
+example(check.alpha)
+
