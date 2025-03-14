@@ -14,10 +14,11 @@ Conditional Standard Error of Measurement (CSEM), including:
 -   **Binomial-CSEM**: Based on the binomial model
 -   **Other Reliability-Based Methods**
 
-Additionally, the package includes tools for: - Splitting test items
-into halves (`check.split`) - Computing reliability estimates
-(`check.alpha`, `check.angoff`) - Testing the distribution of split
-scores (`check.distribution`) - Visualizing results (`check.plot`)
+Additionally, the package includes tools for: 
+- Splitting test items into halves (`check.split`)
+- Computing reliability estimates (`check.alpha`, `check.angoff`)
+- Testing the distribution of split scores (`check.distribution`)
+- Visualizing results (`check.plot`)
 
 ## Installation
 
@@ -34,8 +35,9 @@ library(CSEM)
 
 ## Example data
 
-set.seed(123) dhalf1 \<- matrix(sample(1:5, 30, replace = TRUE), nrow =
-10) dhalf2 \<- matrix(sample(1:5, 30, replace = TRUE), nrow = 10)
+set.seed(123)
+dhalf1 <- matrix(sample(1:5, 30, replace = TRUE), nrow = 10)
+dhalf2 <- matrix(sample(1:5, 30, replace = TRUE), nrow = 10)
 
 ## Example: Computing MF-CSEM
 
