@@ -1,6 +1,9 @@
 
 unlink("man", recursive = TRUE) # Borra la documentación antigua
 devtools::document()  # Genera la nueva documentación
+
+dir.create("data")
+
 devtools::load_all()  # Carga las funciones del paquete
 devtools::install
 

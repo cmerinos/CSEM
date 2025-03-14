@@ -23,7 +23,7 @@ To install and load the package, run:
 
 \`\`\`r \# Install from GitHub (if applicable)
 
-devtools::install_github("YourGitHubUsername/CSEM")
+devtools::install_github("cmerinos/CSEM")
 
 # Load the package
 
@@ -33,7 +33,11 @@ library(CSEM)
 
 ## Example data
 
-set.seed(123) dhalf1 \<- matrix(sample(1:5, 30, replace = TRUE), nrow = 10) dhalf2 \<- matrix(sample(1:5, 30, replace = TRUE), nrow = 10)
+set.seed(123)
+
+dhalf1 \<- matrix(sample(1:5, 30, replace = TRUE), nrow = 10)
+
+dhalf2 \<- matrix(sample(1:5, 30, replace = TRUE), nrow = 10)
 
 ## Example: Computing MF-CSEM
 

@@ -1,8 +1,3 @@
----
-editor_options: 
-  markdown: 
-    wrap: 72
----
 
 # CSEM: A Package for Computing Conditional Standard Errors of Measurement
 
@@ -14,18 +9,17 @@ Conditional Standard Error of Measurement (CSEM), including:
 -   **Binomial-CSEM**: Based on the binomial model
 -   **Other Reliability-Based Methods**
 
-Additionally, the package includes tools for: 
-- Splitting test items into halves (`check.split`)
-- Computing reliability estimates (`check.alpha`, `check.angoff`)
-- Testing the distribution of split scores (`check.distribution`)
-- Visualizing results (`check.plot`)
+Additionally, the package includes tools for: - Splitting test items
+into halves (`check.split`) - Computing reliability estimates
+(`check.alpha`, `check.angoff`) - Testing the distribution of split
+scores (`check.distribution`) - Visualizing results (`check.plot`)
 
 ## Installation
 
 To install and load the package, run:
 
 \`\`\`r \# Install from GitHub (if applicable)
-devtools::install_github(“YourGitHubUsername/CSEM”)
+devtools::install_github(“cmerinos/CSEM”)
 
 # Load the package
 
