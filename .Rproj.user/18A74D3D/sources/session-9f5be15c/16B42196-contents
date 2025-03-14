@@ -37,6 +37,8 @@
 #' MF.CSEM(half1 = 1:5, half2 = 6:10, data = data, reliability.coef = 0.85,
 #'         n.items = 10, min.score.item = 1, max.score.item = 5)
 #'
+#' @importFrom CSEM calc.adjusted.diff calc.step3.regression
+#'
 #' @export
 MF.CSEM <- function(half1, half2, data,
                     reliability.coef,

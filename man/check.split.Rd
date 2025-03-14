@@ -6,7 +6,7 @@
 \usage{
 check.split(
   data,
-  method = c("ritc", "optimized", "diffict"),
+  method = c("ritc", "optimized", "diff"),
   n_iter = 1000,
   seed = 123,
   half.eq = c("equal", "unequal")
@@ -15,7 +15,7 @@ check.split(
 \arguments{
 \item{data}{Dataframe con los ítems}
 
-\item{method}{Método de división ("ritc", "diffict", "optimized")}
+\item{method}{Método de división ("ritc", "diff", "optimized")}
 
 \item{seed}{Semilla para la reproducibilidad}
 

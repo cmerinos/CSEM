@@ -1,26 +1,26 @@
 {
-    "id": "13FE139A",
-    "path": "~/GitHub/CSEM/R/check.scale.R",
-    "project_path": "R/check.scale.R",
+    "id": "16B42196",
+    "path": "~/GitHub/CSEM/R/MF.CSEM.R",
+    "project_path": "R/MF.CSEM.R",
     "type": "r_source",
-    "hash": "2360664005",
+    "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1741627649974.0,
+    "created": 1741544156493.0,
     "source_on_save": false,
-    "relative_order": 7,
+    "relative_order": 3,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "84,0",
-        "scrollLine": "0"
+        "cursorPosition": "54,3",
+        "scrollLine": "35"
     },
     "folds": "",
-    "lastKnownWriteTime": 1741627884,
+    "lastKnownWriteTime": 1741927690,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1741627884286,
+    "last_content_update": 1741927690553,
     "read_only": false,
     "read_only_alternatives": []
 }

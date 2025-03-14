@@ -1,10 +1,8 @@
-devtools::document()
-devtools::load_all()
 
 unlink("man", recursive = TRUE) # Borra la documentación antigua
 devtools::document()  # Genera la nueva documentación
 devtools::load_all()  # Carga las funciones del paquete
-
+devtools::install
 
 ?calc.adjusted.diff
 help("calc.adjusted.diff")
